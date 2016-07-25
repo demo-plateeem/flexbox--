@@ -1,0 +1,217 @@
+body {
+  /*position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 100vh;*/
+  margin: 0;
+}
+body * {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  height: 85%;
+}
+.sideBar {
+  position: relative;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 25em;
+  background-color: whitesmoke;
+  height: 100%;
+  flex: 0 0 auto;
+  font-weight: bolder;
+}
+.sideBar div {
+  flex: 1;
+  padding: 1em;
+  padding-left: 0;
+  border-top: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  overflow: hidden;
+  text-align: right;
+  font-size: 1.2em;
+}
+.sideBar a {
+  color: #fff;
+}
+.sideBar div input {
+  background-color: #e1e1e1;
+  border-radius: 5px;
+}
+.sideBar div code {
+  font-size: 0.85em;
+}
+.sideBar .hgroup a {
+  color: black;
+}
+.hgroup i.icon {
+  width:4rem;
+  height:100%;
+  padding: 1rem;
+}
+.hgroup i.icon:hover {
+  background-color: #e1e1e1;
+}
+.count-controls {
+  width: 1.8em;
+  padding: 2px;
+}
+.sideBar,
+.demo {
+  min-height: 100%;
+}
+.sideBar div span,
+.sideBar .ui input {
+  text-align: right;
+  width: 4em;
+  padding: 5px 10px;
+  text-align: center;
+}
+.sideBar div span:focus,
+.sideBar .ui input:focus {
+  background-color: #cff7ea;
+  color: #000;
+}
+.sideBar.minimized {
+  margin-left: -21rem;
+  -webkit-transition:  .3s;
+  -moz-transition:  .3s;
+  -ms-transition:  .3s;
+  -o-transition:  .3s;
+  transition:  .8s;
+}
+.sideBar.minimized menu {
+  opacity: .2;
+  transition: .8s;
+}
+.sideBar {
+  transition: .8s;
+}
+.ui.selection.dropdown {
+  padding: 0;
+  min-width: 10px;
+}
+.flex {
+  display: flex;
+}
+.hgroup {
+  justify-content: space-between;
+  /*padding: 1em .5em 1em 1em;*/
+}
+.hgroup a {
+  padding:1rem;
+}
+.controls {
+  flex-direction: column;
+  flex: 1;
+}
+.controls div {
+  flex: 1;
+  justify-content: flex-end;
+}
+.flex-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex-container div {
+  justify-content: space-around;
+  margin: .5em;
+  text-align: center;
+}
+.flex-container div span {
+  display: inline-block;
+  align-self: center;
+}
+.flex-item {
+  flex:  1 auto;
+}
+figure div {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+}
+footer {
+  background-color: #fdf6e3;
+  padding: 1em;
+  color: #1e70bf;
+}
+footer pre {
+  background: #fdf6e3;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 2em;
+  flex: 3;
+  overflow: hidden;
+}
+footer .caniuse {
+  flex: 2;
+  border-radius: 5px;
+  padding: 1em;
+  line-height: 2.8em;
+}
+footer .caniuse a {
+  text-decoration: none;
+  font-size: 2.5em;
+  color: #673AB7;
+  animation: fadeInOut 5s ease-in, color 5s, letterSpace 5s;
+}
+footer .caniuse h3 {
+  margin-top: 5em;
+  display: inline-block;
+}
+
+@keyframes fadeInOut {
+  from {
+    transform: rotate(0deg) scale(1.1);
+    opacity: .2;
+
+  }
+  50% {
+    transform: rotate(-360deg) scale(.5);
+    opacity: .6;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: .8;
+  }
+}
+@keyframes color {
+  from {
+    color: #EF9A9A;
+  }
+  to {
+    color: #673AB7;
+  }
+}
+@keyframes letterSpace {
+  from {
+    letter-spacing: 15px;
+  }
+  50% {
+    letter-spacing: 5px;
+  }
+  to {
+    letter-spacing: normal;
+  }
+}
+@media all and (max-width: 600px) {
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  main aside,
+  main figure {
+    flex: 1 1 auto;
+  }
+}
+/*the color of flex items*/
+figure div.flex-item {
+  background-image: linear-gradient(#4b9df4, white);
+ }
+
